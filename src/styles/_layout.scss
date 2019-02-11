@@ -1,0 +1,26 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  &__section {
+    flex: 1;
+  }
+  &__header {
+    background: $header-background;
+    box-shadow: 0px 0px 5px 1px #dedede;
+    color: $header-text-color;
+    h1 {
+      margin: 0.5em 0 0;
+    }
+  }
+  &__footer {
+    background: $footer-background;
+    color: $footer-text-color;
+    margin-top: 3em;
+  }
+  .content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+  }
+}

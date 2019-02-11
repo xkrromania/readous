@@ -1,0 +1,23 @@
+.btn {
+  padding: 1em 2em;
+  background: #ffda00;
+  border: 1px solid #ffda00;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: all 300ms ease;
+  text-transform: uppercase;
+  &:hover:not(:disabled), &:focus:not(:disabled) {
+    background: #ffda00;
+    border-color: #e4e4e4;
+    cursor: pointer;
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+  &.restart-reading {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+}

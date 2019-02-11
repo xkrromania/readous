@@ -1,0 +1,14 @@
+.article {
+  &__content {
+    column-fill: balance;
+    column-gap: 48px;
+    column-width: 600px;
+    text-align: justify;
+  }
+}
+
+.articles {
+  &.not-visible {
+    opacity: 0.1;
+  }
+}
