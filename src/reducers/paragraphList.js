@@ -1,5 +1,7 @@
 const paragraphList = (state = [], action) => {
   switch (action.type) {
+    case "REMOVE_ALL_PARAGRAPHS":
+      return [];
     case "ADD_PARAGRAPH":
       return [
         ...state,

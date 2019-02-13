@@ -4,12 +4,10 @@ class AddArticle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
       content: "",
       textareaHeight: "37px"
     };
     this.textareaRef = React.createRef();
-    this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleContentChange = this.handleContentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -35,12 +33,9 @@ class AddArticle extends React.Component {
     });
   }
 
-  handleTitleChange(event) {
-    this.setState({ title: event.target.value });
-  }
-
   handleSubmit(event) {
     const article = this.state;
+    this.props.removeAllParagraphs();
     let paragraphs = article.content.split("\n");
     for (let i in paragraphs) {
       if (paragraphs[i].length > 0) {
@@ -50,7 +45,6 @@ class AddArticle extends React.Component {
       }
     }
     this.setState({
-      title: "",
       content: "",
       textareaHeight: "37px"
     });
@@ -59,20 +53,12 @@ class AddArticle extends React.Component {
   }
 
   render() {
-    const { title, content, textareaHeight } = this.state;
+    const { content, textareaHeight } = this.state;
     const textareaStyle = { height: textareaHeight };
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <label>Title</label>
-          <input
-            className="input-control"
-            value={title}
-            onChange={this.handleTitleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Content</label>
+          <label>Article</label>
           <textarea
             ref={this.textareaRef}
             style={textareaStyle}

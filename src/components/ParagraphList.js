@@ -34,8 +34,9 @@ class ParagraphList extends Component {
       <Timer startTime={startTime} timerEnded={this.handleTimerEnded} />
     );
 
-    const listRender = paragraphList.map(paragraph => (
+    const listRender = paragraphList.map((paragraph, index) => (
       <Paragraph
+        isTitle = {index === 0}
         key={paragraph.id}
         content={paragraph.content}
         isRead={paragraph.isRead}
@@ -43,6 +44,7 @@ class ParagraphList extends Component {
         handleIsRead={() => toggleParagraphReadState(paragraph)}
       />
     ));
+
     return (
       <>
         <div
@@ -55,11 +57,9 @@ class ParagraphList extends Component {
         </div>
 
         {!isTimerVisible && (
-          <div class="timer-container">
-            <button className="btn restart-timer" onClick={this.resetTimer}>
-              Restart Reading
-            </button>
-          </div>
+          <button className="btn action restart-timer" onClick={this.resetTimer}>
+            Restart Reading
+          </button>
         )}
       </>
     );

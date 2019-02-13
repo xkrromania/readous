@@ -14,6 +14,12 @@ export const removeParagraph = paragraphId => {
   };
 };
 
+export const removeAllParagraphs = () => {
+  return {
+    type: "REMOVE_ALL_PARAGRAPHS"
+  }
+}
+
 export const toggleParagraphReadState = paragraph => {
   return {
     type: "TOGGLE_PARAGRAPH_READ_STATE",

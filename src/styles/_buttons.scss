@@ -42,7 +42,8 @@
     }
   }
   &.restart-timer {
-    color: #fefefe;
-    padding: 0;
+    position:fixed;
+    top: 40%;
+    left: calc(50% - 125px);
   }
 }
