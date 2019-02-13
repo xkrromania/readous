@@ -2,7 +2,8 @@
   padding: 0.5em 1em;
   background: transparent;
   border: none;
-  font-size: 1em;
+  font-size: 16px;
+  font-family: $heading-font-family;
   transition: all 300ms ease;
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
@@ -40,10 +41,5 @@
     &:active {
       color: lighten($btn--danger-text-color, 5%);
     }
-  }
-  &.restart-timer {
-    position:fixed;
-    top: 40%;
-    left: calc(50% - 125px);
   }
 }

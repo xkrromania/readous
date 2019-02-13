@@ -1,9 +1,10 @@
 .app {
+  background: #fff;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   &__section {
-    padding-bottom: 32px;
+    padding-bottom: 48px;
     flex: 1;
   }
   &__header {
@@ -30,5 +31,11 @@
     max-width: 90%;
     margin: 0 auto;
     padding: 1em;
+    &.main {
+      line-height: 2em;
+      margin: 0 auto;
+      text-align: justify;
+      width: 70%;
+    }
   }
 }

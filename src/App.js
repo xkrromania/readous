@@ -10,17 +10,17 @@ class App extends Component {
         <header className="app__header">
           <div className="content">
             <h1>Readous</h1>
-            <p>Read in focused sessions</p>
+            <p>Read with focus</p>
           </div>
         </header>
         <section className="app__section">
-          <div className="content">
+          <div className="content main">
             <ParagraphList />
             <AddArticle />
           </div>
         </section>
         <footer className="app__footer">
-          <div className="content">Dev in Progress</div>
+          <div className="content">Dev in progress</div>
         </footer>
       </div>
     );

@@ -3,20 +3,20 @@ $active-color: #204fa7;
 $text-color: #272727;
 
 // Layout
-$header-background: #efefef;
+$header-background: #fff100;
 $header-text-color: #272727;
 $footer-background: #272727;
 $footer-text-color: #ccc;
 $app-border-radius: 4px;
 
 // Buttons
-$btn--danger-text-color: #8f3c3c;
+$btn--danger-text-color: #ff6f6f;
 $btn--action-bg-color: #204fa7;
 $btn--action-text-color: #fefefe;
 $btn--primary-text-color:#204fa7;
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Thasadith|Source+Sans+Pro');
 
-$heading-font-family: 'Fugaz One', cursive;
-$content-font-family: 'Source Sans Pro', sans-serif;
+$heading-font-family: 'Source Sans Pro', sans-serif;
+$content-font-family: 'Thasadith', sans-serif;

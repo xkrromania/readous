@@ -5,13 +5,13 @@ class AddArticle extends React.Component {
     super(props);
     this.state = {
       content: "",
-      textareaHeight: "37px"
+      textareaHeight: ""
     };
     this.textareaRef = React.createRef();
     this.handleContentChange = this.handleContentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  
   scrollStep() {
     const scrollStepInPx = 50;
     if (window.pageYOffset === 0) {
@@ -21,7 +21,7 @@ class AddArticle extends React.Component {
   }
 
   scrollToTop() {
-    const delayInMs = 17;
+    const delayInMs = 10;
     let intervalId = setInterval(this.scrollStep.bind(this), delayInMs);
     this.setState({ intervalId: intervalId });
   }
@@ -34,16 +34,9 @@ class AddArticle extends React.Component {
   }
 
   handleSubmit(event) {
-    const article = this.state;
     this.props.removeAllParagraphs();
-    let paragraphs = article.content.split("\n");
-    for (let i in paragraphs) {
-      if (paragraphs[i].length > 0) {
-        this.props.addParagraph({
-          content: paragraphs[i]
-        });
-      }
-    }
+    const article = this.state;
+    this.parseArticleToParagraphs(article);
     this.setState({
       content: "",
       textareaHeight: "37px"
@@ -52,19 +45,29 @@ class AddArticle extends React.Component {
     event.preventDefault();
   }
 
+  parseArticleToParagraphs(article) {
+    let paragraphs = article.content.split("\n");
+    for (let i in paragraphs) {
+      if (paragraphs[i].length > 0) {
+        this.props.addParagraph({
+          content: paragraphs[i]
+        });
+      }
+    }
+  }
   render() {
     const { content, textareaHeight } = this.state;
     const textareaStyle = { height: textareaHeight };
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <label>Article</label>
           <textarea
             ref={this.textareaRef}
             style={textareaStyle}
             className="input-control"
             value={content}
             onChange={this.handleContentChange}
+            placeholder="Copy the article content here..."
           />
         </div>
         <button className="btn action" onClick={this.handleSubmit}>
