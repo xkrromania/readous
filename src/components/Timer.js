@@ -25,8 +25,8 @@ const Timer = function(props) {
   }
 
   return (
-    <div>
-      <h2>Time Left {time}.</h2>
+    <div className='timer-container'>
+      <span className='timer'>Remaining: {time}s.</span>
     </div>
   );
 };

@@ -3,6 +3,7 @@
   min-height: 100vh;
   flex-direction: column;
   &__section {
+    padding-bottom: 32px;
     flex: 1;
   }
   &__header {
@@ -17,6 +18,13 @@
     background: $footer-background;
     color: $footer-text-color;
     margin-top: 3em;
+    height: 3em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .content {
+      padding: 0.5em 1em;
+    }
   }
   .content {
     max-width: 90%;

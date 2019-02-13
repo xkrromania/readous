@@ -1,0 +1,23 @@
+.paragraph {
+  position: relative;
+  &__content {
+    line-height: 2em;
+    margin: 0 auto;
+    text-align: justify;
+    width: 70%;
+  }
+  &.not-visible {
+    opacity: 0.1;
+  }
+}
+.paragraph-list {
+  &.not-visible {
+    opacity: 0.1;
+  }
+}
+.operations-bar {
+  display: flex;
+  .btn-group {
+    margin: 0.5em auto 2em;
+  }
+}

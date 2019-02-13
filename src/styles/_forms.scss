@@ -1,0 +1,35 @@
+.form {
+  margin-top: 1em;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    textarea {
+      box-sizing: border-box;
+      min-height: 64px;
+    }
+    label {
+      color: #8a8a8a;
+      display: block;
+      font-weight: bold;
+      line-height: 1em;
+      text-transform: capitalize;
+    }
+    .input-control {
+      border: 1px solid #ccc;
+      border-radius: $app-border-radius;
+      display: block;
+      flex: 1 1 auto;
+      font-size: 1em;
+      margin: 4px 0;
+      padding: 8px;
+      outline: none;
+      &:focus,
+      &:active {
+        border-color: $active-color;
+      }
+    }
+    +.form-group {
+      margin-top: 1em;
+    }
+  }
+}
