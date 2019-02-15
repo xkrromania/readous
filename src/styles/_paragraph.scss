@@ -40,32 +40,3 @@
   text-align: center;
   width: 100%;
 }
-
-.read-status {
-  bottom: 1.5em;
-  color: #fefefe;
-  opacity: 0.9;
-  font-size: 0.8em;
-  line-height: 1em;
-  left: calc(50% - 80px);
-  position: fixed;
-  display:flex;
-  z-index: 1;
-  .progress-bar {
-    opacity: 0.8;
-    margin-right: 1em;
-    height: 1em;
-    position: relative;
-    background: #fefefe;
-    border-radius: $app-border-radius;
-    width: 86px;
-  }
-  .progress {
-    display: block;
-    height: 100%;
-    border-radius: $app-border-radius ;
-    background-color: #3fff68;
-    position: relative;
-    overflow: hidden;
-  }
-}
