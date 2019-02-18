@@ -11,7 +11,7 @@ const ParagraphList = ({
 }) => {
   const isSubtitle = content => {
     const lastCharacter = content[content.length - 1];
-    const endOfSequence = ["?", "!", ".", ":", "…"];
+    const endOfSequence = ["?", "!", ".", ":", "…","”","\"","'"];
     return endOfSequence.indexOf(lastCharacter) < 0;
   };
   const listRender = paragraphList.map((paragraph, index) => (

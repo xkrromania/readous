@@ -19,7 +19,7 @@ const Paragraph = ({
       <p className="paragraph__content">
         {Content}
         <button className="btn read-paragraph success" onClick={handleIsRead}>
-          mark as read &#10003;
+          mark as {isRead ? <span>unread</span> : <span>read &#10003;</span>}
         </button>
       </p>
     </div>
