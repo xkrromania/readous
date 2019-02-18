@@ -1,4 +1,5 @@
 import React from "react";
+import articleParser from "../services/articleParser";
 
 class AddArticle extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class AddArticle extends React.Component {
     this.handleContentChange = this.handleContentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
+
   scrollStep() {
     const scrollStepInPx = 50;
     if (window.pageYOffset === 0) {
@@ -36,7 +37,14 @@ class AddArticle extends React.Component {
   handleSubmit(event) {
     this.props.removeAllParagraphs();
     const article = this.state;
-    this.parseArticleToParagraphs(article);
+    let paragraphs = articleParser.parse(article);
+    for (let i in paragraphs) {
+      if (paragraphs[i].length > 0) {
+        this.props.addParagraph({
+          content: paragraphs[i]
+        });
+      }
+    }
     this.setState({
       content: "",
       textareaHeight: "37px"
@@ -45,16 +53,6 @@ class AddArticle extends React.Component {
     event.preventDefault();
   }
 
-  parseArticleToParagraphs(article) {
-    let paragraphs = article.content.split("\n");
-    for (let i in paragraphs) {
-      if (paragraphs[i].length > 0) {
-        this.props.addParagraph({
-          content: paragraphs[i]
-        });
-      }
-    }
-  }
   render() {
     const { content, textareaHeight } = this.state;
     const textareaStyle = { height: textareaHeight };

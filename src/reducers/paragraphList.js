@@ -3,6 +3,7 @@ const paragraphList = (state = [], action) => {
     case "REMOVE_ALL_PARAGRAPHS":
       return [];
     case "ADD_PARAGRAPH":
+      console.dir(action);
       return [
         ...state,
         {

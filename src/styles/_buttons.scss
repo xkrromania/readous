@@ -42,6 +42,14 @@
       color: lighten($btn--danger-text-color, 5%);
     }
   }
+  &.success {
+    color: $btn--success-text-color;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($btn--success-text-color, 5%);
+    }
+  }
   &.remove-all-paragraphs {
     margin-top: 4px;
     margin-left: calc(100% - 110px);

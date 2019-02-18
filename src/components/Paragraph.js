@@ -4,19 +4,24 @@ const Paragraph = ({
   content,
   isRead,
   isTitle,
+  isSubtitle,
   handleRemove,
   handleIsRead
 }) => {
   const ParagraphAsTitle = isTitle && <h2>{content}</h2>;
+  const Content =
+    (isSubtitle && <h3> {content} </h3>) || (!isSubtitle && <>{content}</>);
   const ParagraphContent = !isTitle && (
-    <div
-      onClick={handleIsRead}
-      className={isRead ? "paragraph not-visible" : "paragraph"}
-    >
-     <button className="btn delete-paragraph danger" onClick={handleRemove}>
-      &#10006;
+    <div className={isRead ? "paragraph not-visible" : "paragraph"}>
+      <button className="btn delete-paragraph danger" onClick={handleRemove}>
+        &#10006;
       </button>
-      <p className="paragraph__content">{content}</p>
+      <p className="paragraph__content">
+        {Content}
+        <button className="btn read-paragraph success" onClick={handleIsRead}>
+          mark as read &#10003;
+        </button>
+      </p>
     </div>
   );
   return (

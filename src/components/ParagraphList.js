@@ -9,11 +9,17 @@ const ParagraphList = ({
   removeAllParagraphs,
   toggleParagraphReadState
 }) => {
+  const isSubtitle = content => {
+    const lastCharacter = content[content.length - 1];
+    const endOfSequence = ["?", "!", ".", ":", "…"];
+    return endOfSequence.indexOf(lastCharacter) < 0;
+  };
   const listRender = paragraphList.map((paragraph, index) => (
     <>
       <Paragraph
         isTitle={index === 0}
         key={paragraph.id}
+        isSubtitle={isSubtitle(paragraph.content)}
         content={paragraph.content}
         isRead={paragraph.isRead}
         handleRemove={() => removeParagraph(paragraph.id)}
@@ -31,8 +37,11 @@ const ParagraphList = ({
     />
   );
   const clearAllButton = hasParagraphs && (
-    <button className="btn action remove-all-paragraphs" onClick={removeAllParagraphs}>
-      Remove All
+    <button
+      className="btn action remove-all-paragraphs"
+      onClick={removeAllParagraphs}
+    >
+      Clear All
     </button>
   );
 

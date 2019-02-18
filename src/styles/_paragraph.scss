@@ -5,8 +5,7 @@
   transition: all 300ms ease-out;
   &:hover,
   &:focus {
-    cursor: pointer;
-    .delete-paragraph {
+    .delete-paragraph, .read-paragraph {
       opacity: 1;
     }
   }
@@ -17,11 +16,18 @@
   &__content {
     padding: 0 1em;
   }
-  .delete-paragraph {
+  .delete-paragraph, .read-paragraph {
+    font-size: 0.8em;
+    opacity: 0;
     position: absolute;
+  }
+  .delete-paragraph {
     top: 1em;
     left: 0em;
-    opacity: 0;
+  }
+  .read-paragraph {
+    bottom: -0.5em;
+    left: 1.5em;
   }
 }
 
