@@ -1,0 +1,19 @@
+
+// Magic:
+@media (max-width: 900px) {
+  font-size: calc(14px + .4vw);
+}
+
+@media (max-width: 800px) {
+  .app .content.main {
+    width: 95%;
+  }
+  .paragraph {   
+    &__content {
+      padding: 0.5em;
+    }
+    .read-paragraph {
+      left: 1em;
+    }
+  }
+}

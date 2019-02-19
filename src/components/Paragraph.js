@@ -9,15 +9,24 @@ const Paragraph = ({
   handleIsRead
 }) => {
   const ParagraphAsTitle = isTitle && <h2>{content}</h2>;
-  const Content =
-    (isSubtitle && <h3> {content} </h3>) || (!isSubtitle && <>{content}</>);
-  const ParagraphContent = !isTitle && (
+  const ParagraphAsSubtitle = isSubtitle && (
+    <div className={isRead ? "paragraph not-visible" : "paragraph"}>
+      <h3 className="paragraph__content">{content}</h3>
+      <button className="btn delete-paragraph danger" onClick={handleRemove}>
+        &#10006;
+      </button>
+      <button className="btn read-paragraph success" onClick={handleIsRead}>
+        mark as {isRead ? <span>unread</span> : <span>read &#10003;</span>}
+      </button>
+    </div>
+  );
+  const ParagraphAsContent = !isTitle && !isSubtitle && (
     <div className={isRead ? "paragraph not-visible" : "paragraph"}>
       <button className="btn delete-paragraph danger" onClick={handleRemove}>
         &#10006;
       </button>
       <p className="paragraph__content">
-        {Content}
+        {content}
         <button className="btn read-paragraph success" onClick={handleIsRead}>
           mark as {isRead ? <span>unread</span> : <span>read &#10003;</span>}
         </button>
@@ -27,7 +36,8 @@ const Paragraph = ({
   return (
     <>
       {ParagraphAsTitle}
-      {ParagraphContent}
+      {ParagraphAsSubtitle}
+      {ParagraphAsContent}
     </>
   );
 };

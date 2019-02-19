@@ -2,10 +2,6 @@ html {
   color: #222222;
   font-family: $content-font-family;
   font-size: 18px;
-  // Magic:
-  @media (max-width: 1000px) {
-    font-size: calc(12px + .4vw);
-  }
 }
 
 .content {

@@ -11,14 +11,14 @@ const ParagraphList = ({
 }) => {
   const isSubtitle = content => {
     const lastCharacter = content[content.length - 1];
-    const endOfSequence = ["?", "!", ".", ":", "…","”","\"","'"];
+    const endOfSequence = ["?", "!", ".", ":", "…", "”", '"', "'"];
     return endOfSequence.indexOf(lastCharacter) < 0;
   };
   const listRender = paragraphList.map((paragraph, index) => (
     <>
       <Paragraph
         isTitle={index === 0}
-        key={paragraph.id}
+        key={index}
         isSubtitle={isSubtitle(paragraph.content)}
         content={paragraph.content}
         isRead={paragraph.isRead}

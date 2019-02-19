@@ -20,7 +20,7 @@ class App extends Component {
           </div>
         </section>
         <footer className="app__footer">
-          <div className="content">Dev in progress</div>
+          <div className="content">v.0.5</div>
         </footer>
       </div>
     );

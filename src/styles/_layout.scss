@@ -39,14 +39,3 @@
     }
   }
 }
-
-
-@media (max-width: 1000px) {
-  font-size: calc(12px + .4vw);
-}
-
-@media (max-width: 800px) {
-  .app .content.main {
-    width: 90%;
-  }
-}
