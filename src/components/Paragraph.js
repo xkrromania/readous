@@ -9,7 +9,7 @@ const Paragraph = ({
   handleIsRead
 }) => {
   const ParagraphAsTitle = isTitle && <h2>{content}</h2>;
-  const ParagraphAsSubtitle = isSubtitle && (
+  const ParagraphAsSubtitle = !isTitle && isSubtitle && (
     <div className={isRead ? "paragraph not-visible" : "paragraph"}>
       <h3 className="paragraph__content">{content}</h3>
       <button className="btn delete-paragraph danger" onClick={handleRemove}>
