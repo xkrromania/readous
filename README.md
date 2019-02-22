@@ -1,7 +1,7 @@
 # Readous
 An app for reading an article in a focused way, with each paragraph being taken out so you can read it in chunks.
 
-## Learning tool
+## Badges
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
