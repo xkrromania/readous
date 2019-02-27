@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import {
   toggleParagraphReadState,
-  removeParagraph,
   removeAllParagraphs
 } from "../actions";
 import ParagraphList from "../components/ParagraphList";
@@ -20,7 +19,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggleParagraphReadState: paragraph =>
     dispatch(toggleParagraphReadState(paragraph)),
-  removeParagraph: paragraphId => dispatch(removeParagraph(paragraphId)),
   removeAllParagraphs: () => dispatch(removeAllParagraphs())
 });
 

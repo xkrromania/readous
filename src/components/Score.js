@@ -5,7 +5,7 @@ const Score = ({ readCount, total }) => {
   const percentStyle = { width: percentRead + "%" };
   const uncompletedMessage = percentRead !== 100 && (
     <span>
-      read {readCount} of {total}
+      read {readCount} out of {total}
     </span>
   );
   const completedMessage = percentRead === 100 && <span>Completed!</span>;

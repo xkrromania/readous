@@ -38,7 +38,7 @@ const ParagraphList = ({
   );
   const clearAllButton = hasParagraphs && (
     <button
-      className="btn action remove-all-paragraphs"
+      className="btn danger remove-all-paragraphs"
       onClick={removeAllParagraphs}
     >
       Clear All

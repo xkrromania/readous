@@ -1,11 +1,32 @@
+.paragraph-list {
+  margin: 0 auto;
+  max-width: $reading-zone-width;
+  height: 90%;
+  overflow:hidden;
+  transition: all 300ms ease-out;
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  &.not-visible {
+    opacity: 0.1;
+  }
+
+  .remove-all-paragraphs {
+    margin: 0.5em 0 1em;
+    float: right;
+  }
+}
+
 .paragraph {
-  margin: 0;
+  background: $paragraph-background;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+  margin: 1em 0;
   padding: 1em;
   position: relative;
   transition: all 300ms ease-out;
   &:hover,
   &:focus {
-    .delete-paragraph,
     .read-paragraph {
       opacity: 1;
     }
@@ -16,10 +37,10 @@
     }
   }
   &.not-visible {
-    background: #f3f3f3;
+    background: darken($paragraph-background, 8%);
     opacity: 0.4;
     .read-paragraph {
-      opacity: 0;
+      opacity: 0.5;
       &:hover,
       &:focus {
         opacity: 1;
@@ -29,40 +50,13 @@
   &__content {
     padding: 0 1em;
   }
-  .delete-paragraph,
   .read-paragraph {
     font-size: 0.8em;
-    opacity: 0;
-    position: absolute;
-  }
-  .delete-paragraph {
-    top: 1.5em;
-    left: 0em;
-  }
-  h3 {
-    font-size: 1em;
-    +.delete-paragraph {
-      top: 2.5em;
-    }
-  }
-  .read-paragraph {
-    bottom: -0.5em;
-    left: 1.5em;
-  }
-}
-
-.paragraph-list {
-  transition: all 300ms ease-out;
-  h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  &.not-visible {
-    opacity: 0.1;
+    opacity: 0.5;
   }
 }
 
 .operations-bar {
-  text-align: center;
+  padding: 0 1em;
   width: 100%;
 }

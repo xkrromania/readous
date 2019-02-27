@@ -69,7 +69,7 @@ class AddArticle extends React.Component {
           />
         </div>
         <button className="btn action" onClick={this.handleSubmit}>
-          Add Article
+          Start Reading
         </button>
       </form>
     );

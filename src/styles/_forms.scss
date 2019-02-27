@@ -1,5 +1,9 @@
 .form {
-  margin-top: 1em;
+  margin: 1em auto;
+  max-width: $reading-zone-width;
+}
+
+textarea, input, select {
   font-family: $content-font-family;
 }
 
@@ -11,19 +15,20 @@
     min-height: 64px;
   }
   label {
-    color: #8a8a8a;
+    color: $text-color;
     display: block;
     font-weight: bold;
     line-height: 1em;
     text-transform: capitalize;
   }
   .input-control {
+    background: lighten($app-background, 5%);
     border: 1px solid #ccc;
     border-radius: $app-border-radius;
+    color: $text-color;
     display: block;
     flex: 1 1 auto;
-    font-family: $content-font-family;
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 4px 0;
     padding: 8px;
     outline: none;
@@ -32,7 +37,7 @@
       border-color: $active-color;
     }
   }
-  +.form-group {
+  + .form-group {
     margin-top: 1em;
   }
 }
