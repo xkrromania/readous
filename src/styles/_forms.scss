@@ -22,9 +22,9 @@ textarea, input, select {
     text-transform: capitalize;
   }
   .input-control {
-    background: lighten($app-background, 5%);
-    border: 1px solid #ccc;
-    border-radius: $app-border-radius;
+    background: lighten($app-background, 3%);
+    border-color: darken($app-background, 5%);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .1);
     color: $text-color;
     display: block;
     flex: 1 1 auto;

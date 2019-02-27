@@ -1,28 +1,27 @@
 .paragraph-list {
+  background: $paragraph-background;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .1);
   margin: 0 auto;
   max-width: $reading-zone-width;
   height: 90%;
-  overflow:hidden;
+  overflow: hidden;
   transition: all 300ms ease-out;
   h2 {
     text-align: center;
     margin-bottom: 1em;
   }
-  &.not-visible {
-    opacity: 0.1;
+  h3 {
+    font-size: 1em;
+    font-weight: bold;
   }
-
   .remove-all-paragraphs {
-    margin: 0.5em 0 1em;
-    float: right;
+    margin: 0.5em 2em 2em;
   }
 }
 
 .paragraph {
-  background: $paragraph-background;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
-  margin: 1em 0;
-  padding: 1em;
+  margin: 0;
+  padding: 1em 0.5em;
   position: relative;
   transition: all 300ms ease-out;
   &:hover,
@@ -36,8 +35,12 @@
       opacity: 1;
     }
   }
+  &__content {
+    padding: 0 1em;
+  }
   &.not-visible {
     background: darken($paragraph-background, 8%);
+    padding-left: 1em;
     opacity: 0.4;
     .read-paragraph {
       opacity: 0.5;
@@ -46,9 +49,6 @@
         opacity: 1;
       }
     }
-  }
-  &__content {
-    padding: 0 1em;
   }
   .read-paragraph {
     font-size: 0.8em;
