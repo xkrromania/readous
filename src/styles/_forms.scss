@@ -3,7 +3,9 @@
   max-width: $reading-zone-width;
 }
 
-textarea, input, select {
+textarea,
+input,
+select {
   font-family: $content-font-family;
 }
 
@@ -23,8 +25,7 @@ textarea, input, select {
   }
   .input-control {
     background: lighten($app-background, 3%);
-    border-color: darken($app-background, 5%);
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .1);
+    border-color: darken($app-background, 15%);
     color: $text-color;
     display: block;
     flex: 1 1 auto;

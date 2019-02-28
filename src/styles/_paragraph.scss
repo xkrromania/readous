@@ -1,7 +1,7 @@
 .paragraph-list {
   background: $paragraph-background;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, .1);
-  margin: 0 auto;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 2em;
   max-width: $reading-zone-width;
   height: 90%;
   overflow: hidden;
@@ -15,7 +15,7 @@
     font-weight: bold;
   }
   .remove-all-paragraphs {
-    margin: 0.5em 2em 2em;
+    margin: 0.5em calc(50% - 52px) 1em;
   }
 }
 
