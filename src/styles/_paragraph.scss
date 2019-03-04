@@ -40,7 +40,6 @@
   }
   &.not-visible {
     background: darken($paragraph-background, 8%);
-    padding-left: 1em;
     opacity: 0.4;
     .read-paragraph {
       opacity: 0.5;
